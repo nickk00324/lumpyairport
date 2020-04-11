@@ -1,0 +1,67 @@
+@import "helpers/mixins";
+
+.Home {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  h1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 20rem;
+  }
+
+  .quick-glow {
+    @include quick-glow;
+  }
+
+  .Home__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20rem 0;
+
+    @media only screen and (max-width: 500px) {
+      margin: 5rem 0;
+      font-size: 1.2rem;
+    }
+
+    a {
+      padding: 2rem 0;
+      @media only screen and (max-width: 500px) {
+        padding: 1rem 0;
+      }
+    }
+
+    a:hover {
+      @include link-glow;
+    }
+
+    a:hover::before {
+      content: ">";
+      padding-right: 1rem;
+    }
+
+    .selected {
+      @include link-glow;
+    }
+
+    .selected::before {
+      content: ">";
+      padding-right: 1rem;
+    }
+  }
+
+  .Home__start {
+    margin: 20rem 0;
+    cursor: pointer;
+    font-size: 2rem;
+    p:hover {
+      @include link-glow;
+    }
+
+    @media only screen and (max-width: 500px) {
+      margin: 10rem 0;
+    }
+  }
+}

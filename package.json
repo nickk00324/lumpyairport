@@ -1,0 +1,30 @@
+{
+  "name": "beckandcol",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.tsx",
+  "scripts": {
+    "dev": "next -p 666",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/classnames": "^2.2.10",
+    "@types/next": "^9.0.0",
+    "@types/node": "^13.9.2",
+    "@types/react": "^16.9.25",
+    "@types/react-dom": "^16.9.5",
+    "@zeit/next-sass": "^1.0.1",
+    "classnames": "^2.2.6",
+    "next": "^9.3.4",
+    "node-sass": "^4.13.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-player": "^1.15.3",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {}
+}

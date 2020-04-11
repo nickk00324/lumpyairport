@@ -1,0 +1,88 @@
+@import "helpers/mixins";
+
+.VideoPlayer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: black;
+  border: solid 2px rgb(32, 32, 32);
+  width: 860px;
+  margin: 0 auto;
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.28);
+  box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.28);
+  border-radius: 2px;
+
+  @media only screen and (max-width: 880px) {
+    width: 700px;
+  }
+
+  @media only screen and (max-width: 720px) {
+    width: 500px;
+  }
+
+  @media only screen and (max-width: 525px) {
+    width: 400px;
+  }
+
+  @media only screen and (max-width: 425px) {
+    width: 350px;
+  }
+
+  .VideoPlayer__video {
+    margin: 0 auto;
+    height: 510px;
+    width: 800px;
+
+    @media only screen and (max-width: 880px) {
+      height: 400px;
+      width: 600px;
+    }
+
+    @media only screen and (max-width: 720px) {
+      height: 300px;
+      width: 450px;
+    }
+
+    @media only screen and (max-width: 525px) {
+      height: 250px;
+      width: 350px;
+    }
+
+    @media only screen and (max-width: 425px) {
+      height: 200px;
+      width: 300px;
+    }
+  }
+
+  .VideoPlayer__options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+    @media only screen and (max-width: 425px) {
+      font-size: 1.2rem;
+    }
+
+    p {
+      border: solid 2px rgb(88, 88, 88);
+      padding: 1rem;
+      cursor: pointer;
+
+      &:hover {
+        @include link-glow;
+      }
+    }
+
+    .VideoPlayer__options-volume {
+      display: flex;
+    }
+
+    .VideoPlayer__options-main {
+      display: flex;
+    }
+  }
+}

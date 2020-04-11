@@ -1,0 +1,33 @@
+@import "helpers/defaults";
+@import "helpers/mixins";
+
+.Header {
+  max-width: $maxWidth;
+  text-align: center;
+  margin: 7rem auto 3rem auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media only screen and (max-width: 645px) {
+    margin: 3rem auto;
+  }
+
+  &.hide {
+    display: none;
+  }
+
+  .Header__main {
+    @include quick-glow;
+    margin: 1rem auto;
+
+    @media only screen and (max-width: 420px) {
+      animation: none;
+      color: #fff;
+      background-size: auto;
+      background-clip: none;
+      text-fill-color: #fff;
+      -webkit-background-clip: none;
+      -webkit-text-fill-color: #fff;
+    }
+  }
+}

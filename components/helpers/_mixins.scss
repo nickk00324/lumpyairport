@@ -1,0 +1,41 @@
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@mixin quick-glow() {
+  text-align: center;
+  background: linear-gradient(
+    to left,
+    rgb(197, 197, 197) 20%,
+    rgb(197, 197, 197) 40%,
+    rgb(197, 197, 197) 60%,
+    rgb(255, 255, 255) 80%
+  );
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s ease-in infinite;
+}
+
+@mixin link-glow() {
+  text-align: center;
+  background: linear-gradient(
+    to left,
+    rgb(197, 197, 197) 20%,
+    rgb(197, 197, 197) 40%,
+    rgb(197, 197, 197) 60%,
+    rgb(255, 255, 255) 80%
+  );
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 0.3s ease-in infinite;
+}
