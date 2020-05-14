@@ -15,6 +15,11 @@ const Credits = () => {
           were moved online starting in April 2020. Please enjoy the music and
           videos on this website.{" "}
         </p>
+        <p>
+          Special thanks to Chloe Levaillant, Micaela Tobin, Minsu Kang, Shelley
+          Bloom, Adrienne Lauren, Nigel Groom, Joey Herring, Tony Almanza, Chris
+          Chalupsky, and Nick Kochornswasdi.
+        </p>
       </div>
       <div className='foot'>
         website by{" "}

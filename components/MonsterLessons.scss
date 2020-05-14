@@ -1,0 +1,50 @@
+@import "helpers/mixins";
+
+.MonsterLessons {
+  .MonsterLessons__person {
+    text-align: center;
+
+    h1 {
+      margin: 50px 0 30px;
+    }
+
+    .MonsterLessons__video {
+      margin: 20px 0;
+    }
+  }
+
+  .MonsterLessons__nav {
+    display: flex;
+    justify-content: center;
+
+    p {
+      padding: 0 20px;
+      cursor: pointer;
+    }
+  }
+
+  .active {
+    @include link-glow();
+
+    &::before {
+      content: ">";
+      padding-right: 10px;
+    }
+  }
+
+  .bio {
+    max-width: 860px;
+    line-height: 1.3;
+    text-align: left;
+    margin: 0 auto 100px auto;
+
+    @media only screen and (max-width: 500px) {
+      font-size: 12px;
+      margin: 0 auto 50px auto;
+    }
+
+    a {
+      @include link-glow();
+    }
+  }
+}

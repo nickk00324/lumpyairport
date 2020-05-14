@@ -1,7 +1,7 @@
-import ComingSoon from "../components/ComingSoon";
+import MonsterLessons from "../components/MonsterLessons";
 
-const MonsterLessons = () => {
-  return <ComingSoon />;
+const MonsterLessonsPage = () => {
+  return <MonsterLessons />;
 };
 
-export default MonsterLessons;
+export default MonsterLessonsPage;

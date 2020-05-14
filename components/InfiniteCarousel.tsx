@@ -45,7 +45,7 @@ class InfiniteCarousel extends React.Component<
     const { current } = this.list;
     if (current.scrollLeft > SCROLL_AMOUNT * multiplier) {
       const temp = imagesToDisplay;
-      temp.push(imagesToDisplay[nextImageToAdd]);
+      temp.push(this.props.images[nextImageToAdd]);
       this.setState({
         imagesToDisplay: temp,
         nextImageToAdd: (nextImageToAdd + 1) % this.props.images.length,
