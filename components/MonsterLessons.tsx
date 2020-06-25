@@ -3,16 +3,18 @@ import classNames from "classnames";
 import VideoPlayer from "./VideoPlayer";
 import "./MonsterLessons.scss";
 
-const MICAELA_VIDEOS = [
-  "https://vimeo.com/416842111",
-  "https://vimeo.com/417305543",
-];
+const MICAELA_VIDEOS: { [key: string]: string } = {
+  "Vocal Exercises 1": "https://vimeo.com/416842111",
+  "Vocal Exercises 2": "https://vimeo.com/417305543",
+};
 
-const CHLOE_VIDEOS = [
-  "https://vimeo.com/417046038",
-  "https://vimeo.com/417069718",
-  "https://vimeo.com/417050011",
-];
+const CHLOE_VIDEOS: { [key: string]: string } = {
+  "Breathing Exercises": "https://vimeo.com/417046038",
+  "Vocal Warm-ups": "https://vimeo.com/417069718",
+  "Vocal Exercises 1": "https://vimeo.com/417050011",
+  "Lesson 2 Part 1: Easy Improvisation": "https://vimeo.com/418267891",
+  "Lesson 2 Part 2: Voice as an Instrument": "https://vimeo.com/418603257",
+};
 
 const MonsterLessons = () => {
   const [shouldShowMicaelaBio, setShouldShowMicaelaBio] = useState(false);
@@ -57,9 +59,9 @@ const MonsterLessons = () => {
           </p>
         </div>
         {!shouldShowMicaelaBio ? (
-          MICAELA_VIDEOS.map((url: string) => (
+          Object.keys(MICAELA_VIDEOS).map((key: string) => (
             <div className='MonsterLessons__video'>
-              <VideoPlayer url={url} />
+              <VideoPlayer key={key} url={MICAELA_VIDEOS[key]} title={key} />
             </div>
           ))
         ) : (
@@ -109,14 +111,40 @@ const MonsterLessons = () => {
           </p>
         </div>
         {!shouldShowChloeBio ? (
-          CHLOE_VIDEOS.map((url: string) => (
+          Object.keys(CHLOE_VIDEOS).map((key: string) => (
             <div className='MonsterLessons__video'>
-              <VideoPlayer url={url} />
+              <VideoPlayer key={key} url={CHLOE_VIDEOS[key]} title={key} />
             </div>
           ))
         ) : (
           <div className='bio'>
-            <p>bio coming soon!</p>
+            <p>
+              Chloe Levaillant is a French-British singer-songwriter, vocalist,
+              improviser and composer. Born in London, she spent the early part
+              of her childhood in England before moving to France with her
+              family. She got the opportunity to study classical singing at the
+              Conservatoire Darius Milhaud in Aix en Provence. She then did her
+              BA in Contemporary Performance Practice at the Royal Conservatoire
+              Scotland where she graduated in 2017. She did her MFA in VoiceArts
+              at California Institute of the Arts where she graduated in 2019.
+              Chloe is currently working on producing her third album and
+              teaches voice lessons engaging with a variety of vocal styles.
+              <p>
+                Email{" "}
+                <a href={"mailto:chloelevaillantmusic@gmail.com"}>
+                  chloelevaillantmusic@gmail.com
+                </a>{" "}
+                for one on one Skype lessons.
+              </p>
+              <p>
+                <a href='https://chloelevaillant.bandcamp.com/releases'>
+                  chloelevaillant.bandcamp.com/releases
+                </a>
+              </p>
+              <p>
+                <a href='https://chloelevaillant.com/'>chloelevaillant.com</a>
+              </p>
+            </p>
           </div>
         )}
       </div>

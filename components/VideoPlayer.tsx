@@ -4,6 +4,7 @@ import "./VideoPlayer.scss";
 
 type VideoPlayerProps = {
   url: string;
+  title?: string;
 };
 
 type VideoPlayerState = {
@@ -28,6 +29,9 @@ class VideoPlayer extends React.Component<VideoPlayerProps, VideoPlayerState> {
     return (
       <div className='VideoPlayer'>
         <div className='VideoPlayer__video'>
+          {this.props.title && !this.state.playing && (
+            <p className='video_title'>{this.props.title}</p>
+          )}
           <ReactPlayer
             className='player'
             ref={this.ref}
@@ -40,7 +44,7 @@ class VideoPlayer extends React.Component<VideoPlayerProps, VideoPlayerState> {
         </div>
         <div className='VideoPlayer__options'>
           <div className='VideoPlayer__options-main'>
-            <p onClick={() => this.setState({ playing: true })}>|></p>
+            <p onClick={() => this.setState({ playing: true })}>{"|>"}</p>
             <p onClick={() => this.setState({ playing: false })}>||</p>
             <p
               onClick={() => {
